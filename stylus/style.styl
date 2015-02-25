@@ -1,0 +1,306 @@
+// **********
+// REQUIREMENTS
+// **********
+
+
+@import nib
+@import "fontawesome/index.styl"
+
+// **********
+// VARS
+// **********
+
+
+$phi = 1.618
+
+$golden_major = 0.618
+$golden_minor = 0.382
+
+$base_font_size = 16
+$px = ( 1 / $base_font_size ) rem
+
+$inner = (1920*$golden_major)
+
+$JCIBlue = #0098D8
+// **********
+// FUNCTIONS
+// **********
+
+
+step($start, $steps, $multiplier = $start, $unit="none")
+	for i in (1..$steps)
+		$start = $start*$multiplier
+	if $unit != "none"
+		unit($start, $unit)
+	else
+		$start
+
+percent($num)
+	unit($num * 100, '%')
+
+rspn-width(NUM)
+	max-width 61.8%//unit( NUM * $px, rem )
+	width 100%
+	margin-left auto
+	margin-right auto
+
+// **********
+//  ELEMENTS 
+// **********
+
+
+// *
+// 	box-sizing border-box
+
+// html
+// body
+// 	margin 0
+// 	padding 0
+// 	height 100%
+
+// html
+// 	font-family "Ubuntu"
+
+// a
+// 	&:link
+// 	&:hover
+// 	&:visited
+// 	&:focus
+// 		text-decoration none
+
+// img
+// 	width 100%
+// 	height 100%
+
+.clearfloats
+	clearfix()  
+*  *:after  *:before 
+	 -webkit-box-sizing: border-box
+	 box-sizing: border-box;
+	 
+.clearfix:before, .clearfix:after
+	content: ''
+	display: table
+.clearfix:after
+	clear: both
+
+body
+	background: #fff;
+	color: #383a3c;
+	//font-weight: 400;
+	font-size: 1em;
+	line-height: 1.25;
+	font-family: 'Raleway', Calibri, Arial, sans-serif;
+
+
+a button 
+	outline: none;
+
+
+a 
+	color: #566473;
+	text-decoration: none;
+
+
+a:hover, a:focus 
+	color: #34495e;
+
+
+section 
+	padding: 1em;
+	text-align: center;
+
+
+p.ref 
+	text-align: center;
+	padding: 2em 1em;
+
+.large-header 
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+	background-image: url('../images/inauguralceremony_copy.jpg');
+	background-position: center bottom;
+
+$logosize = 20vw
+.main-title 
+	content: '';
+	width: 5em
+	height:(5*45/100)em
+	width: $logosize
+	height:($logosize*45/100)vw
+	min-width: 3em
+	min-height: (3*45/100)em
+	background: url(../JCIDragon.svg) no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+
+.menu
+	background-color #0098D8
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 2;
+	-webkit-transform: translate3d(-50%,-0%,0);
+	transform: translate3d(-50%,-0%,0);
+	font-style #000
+	width 61.8%
+	display block
+	text-align: center
+	//padding unit($golden_minor,em)
+	li
+		position relative
+		left -2%
+		font-size 18*$px
+		list-style-type none
+		display inline-block
+		padding 0 unit($golden_minor*2,em) 0 0
+	a
+		text-align: middle
+		height 100%
+		color #fff
+.showname
+	width 61.8%
+	position: absolute
+	z-index 1
+	left 50%
+	top 90%
+	-webkit-transform: translate3d(-50%,-10%,0);
+	transform: translate3d(-50%,-10%,0);
+	background-color: $JCIBlue
+	color #fff
+	p 
+		text-align: center
+		//height unit($golden_minor,em)
+		//font-size 30*$px
+		//padding 5*$px
+
+.flagshipwrap
+	width 100%
+
+.flagship_header
+		text-align: center
+		font-size: 50*$px
+.flagship
+	rspn-width($inner)
+	padding 1rem 0
+
+.flagshipitem
+	padding-left step(1, 2, $phi, rem)
+	width 20%
+	float left
+	text-align left
+	div
+		font-size 40*$px
+		font-size 2.5vw
+		//position relative
+		border:  1px solid
+		width:  13rem
+		height  13rem
+		width:  13vw
+		height  13vw
+		
+
+.mainwrap
+	padding-top:  75*$px
+	width 100%
+	display inline-block
+	position: relative
+
+main
+	rspn-width($inner)
+	border-style solid
+	border-width 1px 0 0 0
+article
+	border-style solid
+	border-width 0 0 1px 0
+	text-align center
+	font-family: sans-serif
+.thumb
+	display block
+	padding-top:  4rem
+	padding-bottom: 4rem
+	text-align center
+	img
+		width 95%
+
+.content
+	h1
+		line-height 1em
+		margin 4rem
+		font-size 3em
+		text-align center
+	p
+		line-height 1em
+		margin 2rem
+		font-size 1.5em
+		text-align center
+	a
+		&:link
+		&:hover
+		&:visited
+		&:focus
+			text-decoration underline
+
+a.readmore
+	display inline-block
+	font-size 14*$px
+	font-weight bold
+	&:link
+	&:hover
+	&:visited
+	&:focus
+		text-decoration none
+
+.footerwrap
+	rspn-width($inner)
+
+footer
+	text-align: center
+	padding-top 1.5em
+	padding-bottom 1.5em
+	rspn-width($inner)
+	.copyright, .joinus, .social
+		// margin-left auto
+		// margin-right: auto
+		//border: 1px solid
+		font-size 14*$px
+		font-family: sans-serif
+		display block
+		//width:  25em
+		padding 1em 0 1em 0
+		text-align: center
+			a
+				width 2em
+				height 1em
+				text-decoration: none
+				display inline-block
+				i:before
+					font-size 14*$px
+					text-decoration: none
+					width 1em
+					height 1em
+					display block
+					font-style normal
+					text-align center
+					font-family "FontAwesome"
+				i.facebook:before
+					content $fa-var-facebook
+
+
+// // **********
+// // IMPORTS
+// // **********
+
+
+//@import _colorscheme
+//@import _layout

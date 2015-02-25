@@ -1,0 +1,87 @@
+$highlight_color = #0098d8
+$highlight_brightened = lighten($highlight_color, 15%)
+$highlight_darkened = darken($highlight_color, 15%)
+$highlight_greyed = lighten(desaturate($highlight_color, 70%), 50%)
+$highlight_hover = saturate($highlight_brightened, 40%)
+$highlight_textover = lighten($highlight_hover, 40%)
+
+*
+	box-sizing border-box
+
+html
+	background-color #e4e4e4
+	color #666666
+
+.headerwrap
+	background-color #fff
+	border-color $highlight_color
+
+header
+	.logo:before
+		color $highlight_color
+	h1
+		color #666666
+
+.menu
+	a
+		&:link
+		&:visited
+			color #666666
+		&:hover
+		&.active
+			background linear-gradient(bottom, $highlight_color, $highlight_brightened)
+			color #fff
+
+.showwrap
+	background linear-gradient(bottom, $highlight_brightened 0%, $highlight_color 2%, $highlight_color 98%, $highlight_darkened 100%)
+
+.showimg
+	background-color #eee
+	box-shadow( 0 3*$px 8*$px $highlight_darkened)
+.showname
+	background-color #eee
+	padding 1rem
+.flagshipwrap
+	background-color #e9e9e9
+	border-bottom 1*$px solid $highlight_greyed
+
+.flagshipitem
+	h1
+		&:before
+			color $highlight_color
+
+main
+	background-color #fff
+	border-left 1*$px solid $highlight_greyed
+	border-right 1*$px solid $highlight_greyed
+
+article
+	border-bottom 1*$px solid $highlight_greyed
+
+.content
+	h1
+		color $highlight_color
+	a
+		&:link
+		&:visited
+			color $highlight_color
+		&:hover
+		&:focus
+			color $highlight_hover
+
+a.readmore
+	background-color $highlight_color
+	&:link
+	&:visited
+		color #ffffff
+	&:hover
+	&:focus
+		background-color $highlight_hover
+
+.footerwrap
+	background-color $highlight_color
+	color $highlight_textover
+	a
+		&:link
+		&:visited
+			color inherit

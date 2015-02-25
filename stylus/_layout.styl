@@ -1,0 +1,73 @@
+// **********
+// VARS & FUNCTIONS
+// **********
+$phi = unit(1.618, rem)
+
+$golden_major = 0.618
+$golden_minor = 0.382
+$gMajor = unit($golden_major, rem)
+$gMinor = unit($golden_minor, rem)
+
+step($start, $steps, $multiplier = $start, $unit="none")
+	for i in (1..$steps)
+		$start = $start*$multiplier
+	if $unit != "none"
+		unit($start, $unit)
+	else
+		$start
+
+percent($num)
+	unit($num * 100, '%')
+
+// **********
+//  ELEMENTS 
+// **********
+
+header
+	padding $phi $gMajor
+
+ul.menu
+	li
+		margin-left $gMajor
+		line-height step(1, 2, $phi, em)
+	a
+		padding 0 ($gMinor * 1)
+		&:hover
+		&.active
+			border-radius $gMajor
+		
+
+.showwrap
+	padding 1rem 0
+
+.showimg
+	padding $gMajor
+
+.showname
+	//
+
+.flagship
+	padding 1rem 0
+
+.flagshipitem
+	padding-left step(1, 2, $phi, rem)
+	h1
+		&:before
+			left step(1, 2, $phi, em) * -0.5
+
+article
+	padding step(1, 2, $phi, rem)
+
+.thumb
+	width 100%
+	text-align center
+
+.content
+	width 100%
+	text-align center
+
+a.readmore
+	display none
+
+footer
+	padding $phi
