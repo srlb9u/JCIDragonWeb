@@ -5,72 +5,67 @@ block title
 	
 
 block content
-	.headerwrap
-		.large-header#large-header
-			canvas#demo-canvas
-			h1.main-title
-					//img(src="JCIDragon.svg")
-		div.menu
-			ul
-				li
-					a(href="#") About JCI
-				li
-					a(href="#") About JCI Dragon
-				li
-					a(href="#") Message
-				li
-					a(href="#") Organization
-				li
-					a(href="#") Events
-				li
-					a(href="#") Publication
-				li
-					a(href="#") Resource
-				li
-					a(href="#") Contact
-		.showname
-			p JCI Dragon Inaugural Ceremony 2015
+	#my_carusel.carousel.slide(data-ride='carousel')
+		
+		// Indicators
+		//- ol.carousel-indicators
+		//- 	li.active(data-target='#my_carusel', data-slide-to='0')
+		//- 	li(data-target='#my_carusel', data-slide-to='1')
+		//- 	li(data-target='#my_carusel', data-slide-to='2')
+		//- // Wrapper for slides
+		.carousel-inner
+			.item.active
+				img(src='images/InauguralCeremony_copy.jpg', alt='...')
+				img.clogo(src="/JCIDragon.svg" )
+				.carousel-caption
+					h3 JCI Dragon Inaugural Ceremony 2015
+			//- .item
+			//-   img(src='http://cdn.wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-25.jpg', alt='...')
+			//-   .carousel-caption
+			//-     h3 Caption
+			//-     p
+			//-       | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestias, quaerat quam assumenda repudiandae molestiae, repellendus quia nesciunt nisi nam quas nobis quis tenetur voluptatem veritatis vero nulla incidunt eos!
+			//- .item
+			//-   img(src='http://www.fabricgraphic.com/wp-content/uploads/2014/07/high-resolution-wallpaper-download.jpg', alt='...')
+			//-   .carousel-caption
+			//-     h3 Caption
+			//-     p
+			//-       | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestias, quaerat quam assumenda repudiandae molestiae, repellendus quia nesciunt nisi nam quas nobis quis tenetur voluptatem veritatis vero nulla incidunt eos!
+			// Controls
+			a.left.carousel-control(href='#my_carusel', role='button', data-slide='prev')
+				span.glyphicon.glyphicon-chevron-left
+			a.right.carousel-control(href='#my_carusel', role='button', data-slide='next')
+				span.glyphicon.glyphicon-chevron-right
+
 	
 
-	.flagshipwrap
-		.flagship.clearfloats
-			.flagship_header
+	.container
+		.flagship.col-md-12
+			.subnav_header
 				p Our Flagship projects:
-			.flagshipitem
-				.first Dragon Apprentice
-			.flagshipitem
-				.second Dragon Volunteer
-			.flagshipitem
-				.third Dual Culture Cup
-			.flagshipitem
-				.fourth 35th Anniversary Ceremony
+			.col-md-3 Dragon Apprentice
+			.col-md-3 Dragon Volunteer
+			.col-md-3 Dual Culture Cup
+			.col-md-3 35th Anniversary Ceremony
 
-	.mainwrap
-		main
-			article.clearfloats
-				.content
-					h1 February 17
-					p 
-						|飛龍騰達2015籌委會議同DBN 會議同步進行，感謝各位臨近歲晚也努力籌備Lets care with insight
-				.thumb
-					img(src="images/facebookpost1.jpg")				
-			
-			article.clearfloats
-				.content
-					h1 February 13
-					p 
-						a(href="./DragonVolunteer.html") Dragon Volunteers 騰龍義工團
-						| 出動，老友記新春團拜
-				.thumb
-					img(src="images/facebookpost2.jpg")
+	.container
+		article.jumbotron
+			.content
+				h1 February 17
+				p 
+					|飛龍騰達2015籌委會議同DBN 會議同步進行，感謝各位臨近歲晚也努力籌備Lets care with insight
+			.thumb
+				img.img-responsive(src="images/facebookpost1.jpg")				
+		
+		article.jumbotron
+			.content
+				h1 February 13
+				p 
+					a(href="./DragonVolunteer.html") Dragon Volunteers 騰龍義工團
+					| 出動，老友記新春團拜
+			.thumb
+				img.img-responsive(src="images/facebookpost2.jpg")
 
-	.footerwrap
-		footer.clearfloats
-			.social
-				a(href="//www.facebook.com/JCIDragon") #[i.facebook]
 
-			.joinus Come and Join Us!!!
-			.copyright &copy; JCI Dragon 2015 All Rights Reserved 
-			
 			
 	script(type="application/javascript", src="js/FullScreen.js")

@@ -1,0 +1,18 @@
+extends docwrapper
+
+block title
+	| Message - JCI Dragon
+	
+
+block content
+	.container
+		.subnav
+			#Menu_President
+			#menu_NP
+			#menu_NAEO
+		.jumbotron#President
+			include ./Message/President.jade
+		.jumbotron#NP
+			include ./Message/NP.jade
+		.jumbotron#NAEO
+			include ./Message/NAEO.jade

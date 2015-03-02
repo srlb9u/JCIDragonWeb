@@ -1,0 +1,24 @@
+extends docwrapper
+
+block title
+	| About JCI - JCI Dragon
+	
+
+block content
+	.container
+		.subnav
+			#menu_JCI
+			#menu_JCIHK
+			#menu_UNMDG
+			#menu_Climate
+			#menu_NothingButNets
+		.jumbotron#JCI
+			include ./aboutJCI/JCI.jade
+		.jumbotron#JCIHK
+			include ./aboutJCI/JCIHK.jade
+		.jumbotron#UNMDG
+			include ./aboutJCI/UNMDG.jade
+		.jumbotron#Climate
+			include ./aboutJCI/Climate.jade
+		.jumbotron#NothingButNets
+			include ./aboutJCI/NothingButNets.jade

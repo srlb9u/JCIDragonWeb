@@ -1,0 +1,24 @@
+extends docwrapper
+
+block title
+	| About JCI Dragon - JCI Dragon
+	
+
+block content
+	.container
+		.subnav
+			#Menu_JCIDragon
+			#menu_BOD
+			#menu_YearPlan
+			#menu_PPList
+			#menu_HistoryAndGoals
+		.jumbotron#JCIDragon
+			include ./aboutJCIDragon/JCIDragon.jade
+		.jumbotron#BOD
+			include ./aboutJCIDragon/bod.jade
+		.jumbotron#YearPlan
+			include ./aboutJCIDragon/YearPlan.jade
+		.jumbotron#PPList
+			include ./aboutJCIDragon/PPList.jade
+		.jumbotron#HistoryAndGoals
+			include ./aboutJCIDragon/HistoryAndGoals.jade
