@@ -1,0 +1,111 @@
+extends docwrapper
+
+block title
+  | Testing Page
+  
+
+block content
+  append css
+    link( href='css/scroll.css', rel='stylesheet', type='text/css' )
+    script(src="js/scroll.js")
+
+  // Hero
+  section#intro.jumbotron
+    .container
+      h1 Hero words
+      p
+        | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+  // grid
+  section#sec0
+    .container
+      .row
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+    // /.container
+  // SECTIONS SCROLLSPY
+  .fixed-side-navbar
+    ul.nav
+      li
+        a(href='#intro')
+          span Intro
+      li
+        a(href='#sec0')
+          span Features
+      li
+        a(href='#sec1')
+          span Parallax image
+      li
+        a(href='#sec2')
+          span Section two
+      li
+        a(href='#sec3')
+          span Section three
+      li
+        a(href='#sec4')
+          span Section four
+  section#sec1.flatbox.parallax.bg1
+    .container
+      h2 Parallax is something
+      p.lead.wrap
+        | After all, why should you go to jail for a crime somebody else noticed? Oh please. They didn't sneak into this country to be your friends. Let's make Ann the backup, okay? Very good way to think about her, as a backup.
+  section#sec2.flatbox.two
+    .container
+      .row
+        .col-sm-4
+          .square
+        .col-sm-4
+          .square
+        .col-sm-4
+          .square
+  section#sec3.flatbox.parallax.bg2
+    .container
+      h2 Something cool may happen!
+      br
+      p
+        a.btn.btn-outline.btn-lg(href='') I'M A BIG BUTTON
+  // grid
+  section#sec4
+    .container
+      .row
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+      br
+      .row
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        .col-sm-4
+          h2 Heading
+          p
+            | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+    // /.container
+  footer.footer
+    .container
+      .row
+        .col-sm-12
+          | Copyright © Brand 2000 - 2015.

@@ -1,0 +1,69 @@
+extends docwrapper
+
+block title
+	| About JCI - JCI Dragon
+	
+
+block content
+	.fixed-side-navbar
+		ul.nav
+			li
+				a(href='#intro')
+					span Intro
+			li
+				a(href='#JCI')
+					span About JCI
+			li
+				a(href='#JCIHK')
+					span About JCI Hong Hong
+			li
+				a(href='#UNMDG')
+					span UNMDG
+			li
+				a(href='#Climate')
+					span Climate Change
+			li
+				a(href='#NothingButNets')
+					span Nothing But Nets
+	append css
+		link( href='css/scroll.css', rel='stylesheet', type='text/css' )
+		script(src="js/scroll.js")
+
+	.container
+		section#intro.jumbotron
+			.row
+				.col-md-12.text-center
+					h1(name="intro") About JCI:
+			hr
+			.row
+				.col-md-4.text-center
+					a(href="#JCI")
+						img.img-circle(src="images/JCILogo.jpg")
+						h4 About JCI
+				.col-md-4.text-center
+					a(href="#JCIHK")
+						img.img-circle(src="images/JCIHKLogo.jpg")
+						h4 About JCI Hong Kong
+				.col-md-4.text-center
+					a(href="#UNMDG")
+						img.img-circle(src="images/UNMDG.jpg")
+						h4 UNMDG
+			.row
+				.col-md-4.text-center.col-md-offset-2
+					a(href="#Climate")
+						img.img-circle(src="images/Climate.jpg")
+						h4 Climate Change
+				.col-md-4.text-center
+					a(href="#NothingButNets")
+						img.img-circle(src="images/NothingButNets.jpg")
+						h4 Nothing But Nets
+		section#JCI.jumbotron
+			include ./aboutJCI/JCI.jade
+		section#JCIHK.jumbotron
+			include ./aboutJCI/JCIHK.jade
+		section#UNMDG.jumbotron
+			include ./aboutJCI/UNMDG.jade
+		section#Climate.jumbotron
+			include ./aboutJCI/Climate.jade
+		section#NothingButNets.jumbotron
+			include ./aboutJCI/NothingButNets.jade

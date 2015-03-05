@@ -1,0 +1,46 @@
+header {
+  padding: 1.618rem 0.618rem;
+}
+ul.menu li {
+  margin-left: 0.618rem;
+  line-height: 2.617924em;
+}
+ul.menu a {
+  padding: 0 0.382rem;
+}
+ul.menu a:hover,
+ul.menu a.active {
+  border-radius: 0.618rem;
+}
+.showwrap {
+  padding: 1rem 0;
+}
+.showimg {
+  padding: 0.618rem;
+}
+.flagship {
+  padding: 1rem 0;
+}
+.flagshipitem {
+  padding-left: 2.617924rem;
+}
+.flagshipitem h1:before {
+  left: -1.308962em;
+}
+article {
+  padding: 2.617924rem;
+}
+.thumb {
+  width: 100%;
+  text-align: center;
+}
+.content {
+  width: 100%;
+  text-align: center;
+}
+a.readmore {
+  display: none;
+}
+footer {
+  padding: 1.618rem;
+}

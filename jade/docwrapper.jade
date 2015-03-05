@@ -1,6 +1,8 @@
 - var GoogleFonts = 'Ubuntu:400,800,700,300,600'
 
-- var jQuery = false
+- var jQuery = true
+
+- var bootstrap = true
 
 doctype html
 html( lang="en" )
@@ -11,10 +13,84 @@ html( lang="en" )
 		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
 		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
 		link( href='css/style.css', rel='stylesheet', type='text/css' )
-		link( rel="stylesheet" type="text/css" href="css/normalize.css")
+		if bootstrap
+			link( href="css/bootstrap.min.css" rel="stylesheet")
 		if GoogleFonts
 			link( href='http://fonts.googleapis.com/css?family=' + GoogleFonts, rel='stylesheet', type='text/css' )
 		if jQuery
 			script( src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+		block css
+			
+		link( href='css/style.css', rel='stylesheet', type='text/css' )
+		style.
+			#my_carusel {
+			margin-top: -20px;
+			}
+			.navbar {
+			border-radius: 0;
+			}
+
+		script.
+			window.console = window.console || function(t) {};
+			window.open = function(){ console.log('window.open is disabled.'); };
+			window.print = function(){ console.log('window.print is disabled.'); };
+			// Support hover state for mobile.
+			if (false) {
+			window.ontouchstart = function(){};
+			}
+		script( src='js/holder.js' )
 	body
+		header
+			nav.navbar.navbar-inverse(role='navigation')
+				.container
+					// Brand and toggle get grouped for better mobile display
+					.navbar-header
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand.logo(href='Index.html') 
+							p #[img(src="/JCIDragon.svg" width="90" height="36")]
+
+					#bs-example-navbar-collapse-1.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href='aboutJCI.html') About JCI
+							li
+								a(href='aboutJCIDragon.html') About JCI Dragon
+							li
+								a(href='Message.html') Message
+							li
+								a(href='Publication.html') Publication
+							li.disabled
+								//a(href='Gallery.html') Gallery
+								p.navbar-text Gallery
+							li.disabled
+								//a(href='Events.html') Events
+								p.navbar-text Events	
+							li
+								a(href='Resource.html') Resource
+							//- li.dropdown
+							//- 	a.dropdown-toggle(href='#', data-toggle='dropdown')
+							//- 		| Dropdown 
+							//- 		span.caret
+							//- 	ul.dropdown-menu(role='menu')
+										li
+											a(href="#")
+										li.divider
+										li
+											a(href="#")
+
 		block content
+
+	.footerwrap
+		footer
+			.social
+				a(href="//www.facebook.com/JCIDragon") #[i.facebook]
+
+			.joinus Come and Join Us!!!
+			.copyright &copy; JCI Dragon 2015 All Rights Reserved 
+script(src="js/bootstrap.min.js")
+//script(src='//assets.codepen.io/assets/libs/fullpage/jquery-c152c51c4dda93382a3ae51e8a5ea45d.js')
+			

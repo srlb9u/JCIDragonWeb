@@ -1,0 +1,36 @@
+extends docwrapper
+
+block title
+	| Message - JCI Dragon
+	
+
+block content
+	.container
+		.jumbotron
+			.row
+				.col-md-12.text-center
+					h1 Message
+			hr
+			.row
+				.col-md-4.text-center
+					a(href="#President")
+						img.img-circle(src="images/P_s.jpg")
+					h3 Message from President
+				.col-md-4.text-center
+					a(href="#NP")
+						img.img-circle(src="images/NP_s.jpg")
+					h3 Message form National President
+				.col-md-4.text-center
+					a(href="#NAEO")
+						img.img-circle(src="images/NAEO_s.jpg")
+					h3 Message form National Assigned Executive Officer
+			hr
+	.container
+		a(name="President")
+		include ./Message/President.jade
+	.container
+		a(name="NP")
+		include ./Message/NP.jade
+	.container
+		a(name="NAEO")
+		include ./Message/NAEO.jade

@@ -1,0 +1,70 @@
+extends docwrapper
+
+block title
+	| About JCI Dragon - JCI Dragon
+	
+
+block content
+	.fixed-side-navbar
+		ul.nav
+			li
+				a(href='#intro')
+					span Intro
+			li
+				a(href='#JCIDragon')
+					span About JCI Dragon
+			li
+				a(href='#BOD')
+					span Board of directors 2015
+			li
+				a(href='#YearPlan')
+					span Year Plan 2015
+			li
+				a(href='#PPList')
+					span Past President List
+			li
+				a(href='#HistoryAndGoals')
+					span History And Goals
+	append css
+		link( href='css/scroll.css', rel='stylesheet', type='text/css' )
+		script(src="js/scroll.js")
+
+	.container
+		section.jumbotron#intro
+			.row
+				.col-md-12.text-center
+					h1 About JCI Dragon:
+			hr
+			.row
+				.col-md-4.text-center
+					a(href="#JCIDragon")
+						img.img-circle(src="images/JCIDragon.jpg")
+					h4 About JCI Dragon
+				.col-md-4.text-center
+					a(href="#BOD")
+						img.img-circle(src="images/BOD.jpg")
+					h4 Board of directors 2015
+				.col-md-4.text-center
+					a(href="#YearPlan")
+						img.img-circle(src="images/YearPlan.jpg")
+					h4 Year Plan 2015
+			.row
+				.col-md-4.text-center.col-md-offset-2
+					a(href="#PPList")
+						img.img-circle(src="images/PPList.jpg")
+					h4 Past President List
+				.col-md-4.text-center
+					a(href="#HistoryAndGoals")
+						img.img-circle(src="images/HistoryAndGoals.jpg")
+					h4 History And Goals
+			hr
+		section.jumbotron#JCIDragon
+			include ./aboutJCIDragon/JCIDragon.jade
+		section.jumbotron#BOD
+			include ./aboutJCIDragon/bod.jade
+		section.jumbotron#YearPlan
+			include ./aboutJCIDragon/YearPlan.jade
+		section.jumbotron#PPList
+			include ./aboutJCIDragon/PPList.jade
+		section.jumbotron#HistoryAndGoals
+			include ./aboutJCIDragon/HistoryAndGoals.jade
